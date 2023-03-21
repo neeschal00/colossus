@@ -64,6 +64,16 @@ Open your browser and access the setup page to create an admin account:
 http://127.0.0.1:8000/setup/
 ```
 
+Docker Commands For PostGresql and Rabbit MQ
+
+```commandline
+docker run --name some-postgres -e POSTGRES_PASSWORD=mysecretpassword -d postgres
+```
+
+```commandline
+docker run -d --hostname my-rabbit --name some-rabbit rabbitmq:3
+```
+
 PS: Campaign scheduling will not work out-of-the-box. You need to install a message broker and [setup Celery](https://simpleisbetterthancomplex.com/tutorial/2017/08/20/how-to-use-celery-with-django.html) properly.
 
 ## Tech Specs
