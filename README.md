@@ -42,6 +42,30 @@ git clone git@github.com:vitorfs/colossus.git
 
 Ideally, create a [virtualenv](https://docs.python-guide.org/dev/virtualenvs/) and install the projects dependencies:
 
+Install PYENV for Python 3.6.6 Requirement:
+```commandline
+pip install pyenv-win --target %USERPROFILE%\\.pyenv
+```
+## **Add System Settings**
+
+It's a easy way to use PowerShell here
+
+1. Adding PYENV, PYENV_HOME and PYENV_ROOT to your Environment Variables
+
+   ```pwsh
+   [System.Environment]::SetEnvironmentVariable('PYENV',$env:USERPROFILE + "\.pyenv\pyenv-win\","User")
+
+   [System.Environment]::SetEnvironmentVariable('PYENV_ROOT',$env:USERPROFILE + "\.pyenv\pyenv-win\","User")
+
+   [System.Environment]::SetEnvironmentVariable('PYENV_HOME',$env:USERPROFILE + "\.pyenv\pyenv-win\","User")
+   ```
+
+2. Now adding the following paths to your USER PATH variable in order to access the pyenv command
+
+   ```pwsh
+   [System.Environment]::SetEnvironmentVariable('path', $env:USERPROFILE + "\.pyenv\pyenv-win\bin;" + $env:USERPROFILE + "\.pyenv\pyenv-win\shims;" + [System.Environment]::GetEnvironmentVariable('path', "User"),"User")
+   ```
+
 ```commandline
 pip install -r requirements/development.txt
 ```
