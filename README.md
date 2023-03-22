@@ -66,6 +66,13 @@ It's a easy way to use PowerShell here
    ```pwsh
    [System.Environment]::SetEnvironmentVariable('path', $env:USERPROFILE + "\.pyenv\pyenv-win\bin;" + $env:USERPROFILE + "\.pyenv\pyenv-win\shims;" + [System.Environment]::GetEnvironmentVariable('path', "User"),"User")
    ```
+```commandline
+pyenv install 3.6.6
+```
+Set Global or Local based on your choice with repo
+```commandline
+pyenv local|global 3.6.6
+```
 
 ```commandline
 pip install -r requirements/development.txt
