@@ -42,7 +42,8 @@ git clone git@github.com:vitorfs/colossus.git
 
 Ideally, create a [virtualenv](https://docs.python-guide.org/dev/virtualenvs/) and install the projects dependencies:
 
-Install PYENV for Python 3.6.6 Requirement:
+## **Install PYENV**
+for Python 3.6.6 Requirement
 ```commandline
 pip install pyenv-win --target %USERPROFILE%\\.pyenv
 ```
